@@ -94,6 +94,7 @@ def DrawInputsWidgets():
     col5, col6, col7, col8 = st.beta_columns(4)
 
     # We are using these features to feed the ML pipeline - values copied from check_variables_for_UI() result
+    {'PhoneService', 'PaymentMethod', 'MonthlyCharges', 'InternetService', 'OnlineBackup', 'Contract'}
 
     # create an empty DataFrame, which will be the live data
     X_live = pd.DataFrame([], index=[0])
@@ -150,6 +151,6 @@ def DrawInputsWidgets():
         )
     X_live[feature] = st_widget
 
-    # st.write(X_live)
+    st.write(X_live)
 
     return X_live
